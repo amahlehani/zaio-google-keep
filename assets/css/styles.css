@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.material-symbols-outlined {
+    color: rgb(106, 111, 116);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 64px;
+    padding: 8px;
+    border-bottom: 1px solid rgb(218, 220, 224);
+}
+
+.navbar .material-symbols-outlined:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 6px;
+    margin-right: 60px;
+}
+
+.logo:hover {
+    cursor: pointer;
+} 
+
+.logo .material-symbols-outlined {
+    margin-right: 4px;
+    padding: 12px;
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    margin-right: 6px;
+}
+
+.logo a {
+    
+    font-size: 22.5px;
+    font-weight: 400;
+    color: rgb(95, 99, 104);
+    text-decoration: none;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    max-width: 942.13px;
+    width: 942.13px;
+    padding: 0 0 0 30px;
+}
+.searchbar form {
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(241, 243, 244);
+    justify-content: flex-start;
+    height: 48.13px;
+    width: 722.13px;
+    position: relative;
+}
+
+.searchbar button {
+    background-color: rgb(241, 243, 244);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    height: 48.13px;
+    width: 56px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.searchbar .material-symbols-outlined {
+    padding: 8px;
+}
+
+.searchbar .material-symbols-outlined:hover {
+    background-color: #e1e0e0;
+}
+
+.searchbar input {
+    background-color: rgb(241, 243, 244);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    height: 48.13px;
+    left: 8%;
+    width: 615px;
+    border-style: none;
+    outline: none;
+}
+
+.searchbar input::placeholder {
+    font-size: 16px;
+}
+
+/* .icons {
+    width: 144px;
+} */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    /* width: 301.76px; */
+}
+
+.icons .material-symbols-outlined{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.icons .material-symbols-outlined:hover {
+    color: #202124;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.profile .material-symbols-outlined {
+    padding: 8px;
+}
+
+.profile .material-symbols-outlined:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.profile img {
+    border-radius: 50%;
+    margin-left: 8px;
+    padding: 4px;
+}
+
+.profile img:hover {
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.sidemenu {
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    height: calc(100vh - 64px);
+    width: 280px;
+    padding: 8px 0 0 0;
+    position: relative;
+}
+
+.sidemenu-item {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    height: 48px;
+    width: 280px;
+    cursor: pointer;
+}
+
+.sidemenu-item:hover {
+    background-color: #f0f0f0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.sidemenu-item:first-child {
+    background-color: #feefc3;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.sidemenu .lightbulb {
+    color: #202124;
+}
+
+.sidemenu .material-symbols-outlined {
+    padding: 0 12px 0 12px;
+}
+
+
+.sidemenu-text {
+    font-size: 14.6px;
+    font-weight: 500;
+    color: #202124;
+    margin-left: 20px;
+}
+
+footer {
+    font-size: 12px;
+    color: rgb(95, 99, 104);
+    padding: 4px 0 6px 24px;
+    margin: 20px 0 12px 0;
+    position: absolute;
+    top: 90%;
+    cursor: pointer;
+}
+
+footer p:hover {
+    color: black;
+}
