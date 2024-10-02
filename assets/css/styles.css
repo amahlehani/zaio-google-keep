@@ -29,12 +29,13 @@
 .nav-left {
     display: flex;
     align-items: center;
+    height: 48px;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    margin-left: 6px;
+    margin-left: 4px;
     margin-right: 60px;
 }
 
@@ -117,20 +118,20 @@
     font-size: 16px;
 }
 
-/* .icons {
+.icons {
+    display: flex;
     width: 144px;
-} */
+}
 
 .nav-right {
     display: flex;
     align-items: center;
-    /* width: 301.76px; */
+    height: 48px;
 }
 
 .icons .material-symbols-outlined{
     display: flex;
     align-items: center;
-    justify-content: center;
     padding: 12px;
     cursor: pointer;
 }
@@ -143,8 +144,9 @@
 .profile {
     display: flex;
     align-items: center;
-    margin-left: 50px;
-    margin-right: 6px;
+    height: 48px;
+    width: 124px;
+    padding: 0 4px 0 30px;
     cursor: pointer;
 }
 
@@ -170,7 +172,6 @@
 
 .sidemenu {
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
     height: calc(100vh - 64px);
     width: 280px;
@@ -227,4 +228,59 @@ footer {
 
 footer p:hover {
     color: black;
+}
+
+.container {
+    display: flex;
+}
+
+.main-content {
+    height: calc(100vh - 64px);
+    width: calc(100vw - 280px);
+}
+
+.inactive-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.inactive-form-container form {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(218, 220, 224);
+    border-left-width: 3px;
+    border-bottom-width: 3px;
+    border-bottom-color: rgba(137, 136, 136, 0.5);
+    border-radius: 8px;
+    height: 46px;
+    width: 597.876px;
+    padding: 16px 10px 12px 14px;
+    margin-top: 32px;
+    box-shadow: 0.6px 2px 8px 1px rgba(218, 220, 224, 0.9);
+}
+
+.inactive-form-container input {
+    height: 22px;
+    width: 70%;
+    margin-right: 24px;
+    outline: none;
+    border-style: none;
+}
+
+.inactive-form-container input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    color: #574C4C;
+}
+
+.inactive-form-container .material-symbols-outlined {
+    margin-left: 6px;
+    padding: 12px;
+    cursor: default;
+}
+
+.inactive-form-container .material-symbols-outlined:hover {
+    background-color: #f0f0f0;
+    color: #202124;
+    border-radius: 50%;
 }
