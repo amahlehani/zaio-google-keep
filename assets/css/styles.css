@@ -242,6 +242,7 @@ footer p:hover {
 .inactive-form-container {
     display: flex;
     justify-content: center;
+    visibility: visible;
 }
 
 .inactive-form-container form {
@@ -283,4 +284,153 @@ footer p:hover {
     background-color: #f0f0f0;
     color: #202124;
     border-radius: 50%;
+}
+
+.active-form-container {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.active-form-container form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 136.13px;
+    width: 600px;
+    border: 1px solid rgb(218, 220, 224);
+    border-left-width: 3px;
+    border-bottom-width: 3px;
+    border-bottom-color: rgba(137, 136, 136, 0.5);
+    border-radius: 8px;
+    box-shadow: 0.6px 2px 8px 1px rgba(218, 220, 224, 0.9);
+}
+
+.active-form-container .note-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    width: 597.876px;
+    padding: 10px 15px;
+}
+
+.active-form-container .note-title input {
+    outline: none;
+    border: none;
+}
+
+.active-form-container .note-title input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666874;
+}
+
+.active-form-container .note-title .material-symbols-outlined {
+    padding: 6px;
+    cursor: pointer;
+    color: #574C4C;
+}
+
+.active-form-container .note-title .material-symbols-outlined:hover {
+    background-color: #f0f0f0;
+    color: #202124;
+    border-radius: 50%;
+}
+
+.active-form-container .note-text {
+    height: 46px;
+    width: 597.876px;
+    padding: 12px 16px;
+}
+
+.active-form-container .note-text input {
+    outline: none;
+    border: none;
+}
+
+.active-form-container .note-text input::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    color: #574C4C;
+}
+
+.active-form-container .footer-icons {
+    display: flex;
+}
+
+.footer-icon {
+    font-size: 19px;
+    color: #574C4C;
+}
+
+.undo, .redo {
+    color: #BFBFBF;
+}
+
+.active-form-container .note-icons-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    width: 597.876px;
+    margin: 4px 0px;
+    padding: 0px 0px 0px 2px;
+}
+
+.active-form-container .note-icons-footer .material-symbols-outlined {
+    display: flex;
+    align-items: center;
+    margin: 0px 8px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.active-form-container .note-icons-footer .material-symbols-outlined:hover {
+    background-color: #f0f0f0;
+    color: #202124;
+    border-radius: 50%;
+}
+
+.active-form-container .note-icons-footer button {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    width: 86.1px;
+    margin-right: 15px;
+    padding: 8px 24px;
+    border: none;
+    background-color: transparent;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.active-form-container .note-icons-footer button:hover {
+    background-color: rgba(244, 244, 244, 0.5);
+    border-radius: 4px;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip-text {
+    position: absolute;
+    left: -3%;
+    top: 100%;
+    font-size: 0.8rem;
+    background-color: rgb(32,33,36);
+    color: #fff;
+    opacity: 0.8;
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 5px;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
 }

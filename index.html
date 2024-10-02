@@ -15,9 +15,13 @@
     <div class="navbar">
         <div class="nav-left">
             <div class="logo">
-                <span class="material-symbols-outlined">
-                    menu
-                </span>
+                <div class="tooltip">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                    <span class="tooltip-text">Main menu</span>
+                </div>
+
                 <img src="./assets/img/keep_logo.png" alt="google-keep logo">
                 <a href="https://keep.google.com/">
                     <span class="keep-logo">Keep</span>
@@ -27,9 +31,12 @@
             <div class="searchbar">
                 <form class="search">
                     <button class="search-icon">
-                        <span class="material-symbols-outlined">
-                            search
-                        </span>
+                        <div class="tooltip">
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                            <span class="tooltip-text">Search</span>
+                        </div>
                     </button>
                     <input type="text" placeholder="Search">
                 </form>
@@ -38,21 +45,33 @@
 
         <div class="nav-right">
             <div class="icons">
-                <span class="material-symbols-outlined">
-                    refresh
-                </span>
-                <span class="material-symbols-outlined">
-                    view_agenda
-                </span>
-                <span class="material-symbols-outlined">
-                    settings
-                </span>
+                <div class="tooltip">
+                    <span class="material-symbols-outlined">
+                        refresh
+                    </span>
+                    <span class="tooltip-text">Refresh</span>
+                </div>
+                <div class="tooltip">
+                    <span class="material-symbols-outlined">
+                        view_agenda
+                    </span>
+                    <span class="tooltip-text">List view</span>
+                </div>
+                <div class="tooltip">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                    <span class="tooltip-text">Settings</span>
+                </div>
             </div>
     
             <div class="profile">
-                <span class="material-symbols-outlined">
-                    apps
-                </span>
+                <div class="tooltip">
+                    <span class="material-symbols-outlined">
+                        apps
+                    </span>
+                    <span class="tooltip-text">Google apps</span>
+                </div>
                 <img src="https://lh3.googleusercontent.com/ogw/AF2bZyg4fA7KDgO59LKzIYk3MUQM7trlw5K6ctPo7lyU08g_e0w=s32-c-mo" alt="profile-img">
             </div>
         </div>
@@ -101,20 +120,95 @@
             <div class="inactive-form-container">
                 <form>
                     <input type="text" placeholder="Take a note...">
-                    <span class="material-symbols-outlined">
-                        check_box
-                    </span>
-                    <span class="material-symbols-outlined">
-                        brush
-                    </span>
-                    <span class="material-symbols-outlined">
-                        image
-                    </span>
+                    <div class="tooltip">
+                        <span class="material-symbols-outlined">
+                            check_box
+                        </span>
+                        <span class="tooltip-text">New list</span>
+                    </div>
+                    <div class="tooltip">
+                        <span class="material-symbols-outlined">
+                            brush
+                        </span>
+                        <span class="tooltip-text">New note with drawing</span>
+                    </div>
+                    <div class="tooltip">
+                        <span class="material-symbols-outlined">
+                            image
+                        </span>
+                        <span class="tooltip-text">New note with image</span>
+                    </div>
                 </form>
             </div>
             <div class="active-form-container">
                 <form>
-
+                    <div class="note-title">
+                        <input type="text" placeholder="Title">
+                        <div class="tooltip">
+                            <span class="material-symbols-outlined">
+                                keep
+                            </span>
+                            <span class="tooltip-text">Pin note</span>
+                        </div>
+                    </div>
+                    <div class="note-text">
+                        <input type="text" placeholder="Take a note...">
+                    </div>
+                    <div class="note-icons-footer">
+                        <div class="footer-icons">
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon">
+                                    add_alert
+                                </span>
+                                <span class="tooltip-text">Remind me</span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon">
+                                    person_add
+                                </span>
+                                <span class="tooltip-text">Collaborator</span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon">
+                                    palette
+                                </span>
+                                <span class="tooltip-text">Background options</span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon">
+                                    image
+                                </span>
+                                <span class="tooltip-text">Add image</span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon">
+                                    archive
+                                </span>
+                                <span class="tooltip-text">Archive</span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon">
+                                    more_vert
+                                </span>
+                                <span class="tooltip-text">More</span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon undo">
+                                    undo
+                                </span>
+                                <span class="tooltip-text">Undo</span>
+                            </div>
+                            <div class="tooltip">
+                                <span class="material-symbols-outlined footer-icon redo">
+                                    redo
+                                </span>
+                                <span class="tooltip-text">Redo</span>
+                            </div>            
+                        </div>
+                        <div class="footer-btn">
+                            <button class="close.btn">Close</button>
+                        </div>  
+                    </div>
                 </form>
             </div>
         </div>
