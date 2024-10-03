@@ -11,6 +11,8 @@
     color: rgb(106, 111, 116);
 }
 
+/* Navbar styling */
+
 .navbar {
     display: flex;
     align-items: center;
@@ -170,6 +172,8 @@
     border-radius: 50%;
 }
 
+/* Sidemenu styling */
+
 .sidemenu {
     display: flex;
     flex-direction: column;
@@ -230,6 +234,8 @@ footer p:hover {
     color: black;
 }
 
+/* Main content styling */
+
 .container {
     display: flex;
 }
@@ -239,13 +245,15 @@ footer p:hover {
     width: calc(100vw - 280px);
 }
 
+/* Inactive form styling */
+
 .inactive-form-container {
     display: flex;
     justify-content: center;
     visibility: visible;
 }
 
-.inactive-form-container form {
+.inactive-form {
     display: flex;
     align-items: center;
     border: 1px solid rgb(218, 220, 224);
@@ -277,7 +285,7 @@ footer p:hover {
 .inactive-form-container .material-symbols-outlined {
     margin-left: 6px;
     padding: 12px;
-    cursor: default;
+    cursor: pointer;
 }
 
 .inactive-form-container .material-symbols-outlined:hover {
@@ -286,13 +294,14 @@ footer p:hover {
     border-radius: 50%;
 }
 
-.active-form-container {
+/* Active form styling */
+
+.active-form-container, .form-container {
     display: flex;
     justify-content: center;
-    visibility: visible;
 }
 
-.active-form-container form {
+.active-form {
     display: flex;
     flex-direction: column;
     height: 136.13px;
@@ -303,9 +312,11 @@ footer p:hover {
     border-bottom-color: rgba(137, 136, 136, 0.5);
     border-radius: 8px;
     box-shadow: 0.6px 2px 8px 1px rgba(218, 220, 224, 0.9);
+    margin-top: 32px;
+    display: none;
 }
 
-.active-form-container .note-title {
+.active-form-container .note-title, .modal .note-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -314,48 +325,48 @@ footer p:hover {
     padding: 10px 15px;
 }
 
-.active-form-container .note-title input {
+.active-form-container .note-title input, .modal .note-title input{
     outline: none;
     border: none;
 }
 
-.active-form-container .note-title input::placeholder {
+.active-form-container .note-title input::placeholder, .modal .note-title input::placeholder{
     font-size: 16px;
     font-weight: 500;
     color: #666874;
 }
 
-.active-form-container .note-title .material-symbols-outlined {
+.active-form-container .note-title .material-symbols-outlined, .modal .note-title .material-symbols-outlined{
     padding: 6px;
     cursor: pointer;
     color: #574C4C;
 }
 
-.active-form-container .note-title .material-symbols-outlined:hover {
+.active-form-container .note-title .material-symbols-outlined:hover, .modal .note-title .material-symbols-outlined:hover{
     background-color: #E9EAEA;
     color: #202124;
     border-radius: 50%;
 }
 
-.active-form-container .note-text {
+.active-form-container .note-text, .modal .note-text {
     height: 46px;
     width: 597.876px;
     padding: 12px 16px;
 }
 
-.active-form-container .note-text input {
+.active-form-container .note-text input, .modal .note-text input{
     outline: none;
     border: none;
     width: 100%;
 }
 
-.active-form-container .note-text input::placeholder {
+.active-form-container .note-text input::placeholder, .modal .note-text input::placeholder{
     font-size: 14px;
     font-weight: 500;
     color: #574C4C;
 }
 
-.active-form-container .footer-icons {
+.active-form-container .footer-icons, .modal .footer-icons {
     display: flex;
 }
 
@@ -368,7 +379,7 @@ footer p:hover {
     color: #BFBFBF;
 }
 
-.active-form-container .note-icons-footer {
+.active-form-container .note-icons-footer, .modal .note-icons-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -378,7 +389,7 @@ footer p:hover {
     padding: 0px 0px 0px 2px;
 }
 
-.active-form-container .note-icons-footer .material-symbols-outlined {
+.active-form-container .note-icons-footer .material-symbols-outlined, .modal .note-icons-footer .material-symbols-outlined{
     display: flex;
     align-items: center;
     margin: 0px 8px;
@@ -386,13 +397,13 @@ footer p:hover {
     cursor: pointer;
 }
 
-.active-form-container .note-icons-footer .material-symbols-outlined:hover {
+.active-form-container .note-icons-footer .material-symbols-outlined:hover, .modal .note-icons-footer .material-symbols-outlined:hover{
     background-color: #E9EAEA;
     color: #202124;
     border-radius: 50%;
 }
 
-.active-form-container .note-icons-footer button {
+.active-form-container .note-icons-footer button, .modal .note-icons-footer button{
     display: flex;
     align-items: center;
     height: 36px;
@@ -407,10 +418,12 @@ footer p:hover {
     cursor: pointer;
 }
 
-.active-form-container .note-icons-footer button:hover {
+.active-form-container .note-icons-footer button:hover, .model button:hover {
     background-color: rgba(244, 244, 244, 0.5);
     border-radius: 4px;
 }
+
+/* Tooltip stylying for icons */
 
 .tooltip {
     position: relative;
@@ -435,6 +448,8 @@ footer p:hover {
     visibility: visible;
 }
 
+/* Notes styling */
+
 .notes {
     height: 350px;
     margin: 30px 0px 0px 85px;
@@ -454,6 +469,7 @@ footer p:hover {
     justify-content: space-between;
     padding: 12px 10px 0px 16px;
     height: 38px;
+    cursor: default;
 }
 
 .note-header p {
@@ -487,6 +503,7 @@ footer p:hover {
     padding: 12px 16px;
     font-size: 18px;
     color: #202124;
+    cursor: default;
 }
 
 .note .note-pin {
@@ -497,4 +514,93 @@ footer p:hover {
     background-color: #E9EAEA;
     color: #202124;
     border-radius: 50%;
+}
+
+.note .material-symbols-outlined {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.note:hover .material-symbols-outlined {
+    visibility: visible;
+ 
+}
+
+/* Modal styling */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(121, 122, 124, 0.6);
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: 0.5s ease, visibility 0s 0.5s;
+    visibility: hidden;
+}
+
+.modal-content {
+    width: 597.876px;
+    position: relative; 
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    transition: transform 0.5s ease-out;
+}
+
+.modal form {
+    background-color: white;
+    box-shadow: 0.6px 2px 8px 1px rgb(121, 122, 124);
+    display: flex;
+    flex-direction: column;
+    height: 136.13px;
+    width: 600px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.form-container {
+    height: 180px;
+}
+
+.modal .note-title {
+    height: 56px;
+    padding: 16px 15px 12px 15px;
+}
+
+.modal .note-title input {
+    height: 28px;
+    padding: 6px 0px;
+    font-size: 22px;
+}
+
+.modal .note-title input::placeholder {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgb(32,33,36);
+}
+
+.modal .note-text {
+    height: 80px;
+    padding: 4px 16px 5px 16px;
+}
+
+.modal .note-text input {
+    height: 30px;
+    font-size: 16px;
+}
+
+.modal .note-text input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(32,33,36);
+}
+
+.open-model {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
