@@ -32,7 +32,7 @@ class App {
         })
 
         this.$form.addEventListener("submit", (event) => {
-            event.preventDefault(); // Prevent the page / browser from refreshing
+            event.preventDefault(); // Prevents the page / browser from refreshing
             const title = this.$noteTitle.value;
             const text = this.$noteText.value;
             this.addNote({title, text});
@@ -55,11 +55,11 @@ class App {
             this.addNote({title, text});
             // Calling the function to close the active form
             this.closeActiveForm();
-        };
+        }
     };
 
     openModal(event) {
-        if (event.target.closest(".note")) {
+        if (event.target.closes(".note")) {
             this.$modal.classList.add("open-model");
         };
     };
