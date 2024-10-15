@@ -9,6 +9,40 @@
 
 .material-symbols-outlined {
     color: rgb(106, 111, 116);
+    padding: 10px;
+}
+
+.hover:hover {
+    background-color: #f0f0f0;
+    color: #202124;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+/* Tooltip stylying for icons */
+
+.tooltip {
+    position: relative;
+    display: inline;
+}
+
+.tooltip-text {
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    font-size: 0.78rem;
+    background-color: rgb(32,33,36);
+    color: #fff;
+    opacity: 0.8;
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 5px;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
 }
 
 /* Navbar styling */
@@ -23,15 +57,9 @@
     border-bottom: 1px solid rgb(218, 220, 224);
 }
 
-.navbar .material-symbols-outlined:hover {
-    background-color: #f0f0f0;
-    border-radius: 50%;
-}
-
 .nav-left {
     display: flex;
     align-items: center;
-    height: 48px;
 }
 
 .logo {
@@ -56,8 +84,7 @@
     margin-right: 6px;
 }
 
-.logo a {
-    
+.logo a { 
     font-size: 22.5px;
     font-weight: 400;
     color: rgb(95, 99, 104);
@@ -112,8 +139,9 @@
     height: 48.13px;
     left: 8%;
     width: 615px;
-    border-style: none;
+    border: none;
     outline: none;
+    font-size: 16px;
 }
 
 .searchbar input::placeholder {
@@ -138,11 +166,6 @@
     cursor: pointer;
 }
 
-.icons .material-symbols-outlined:hover {
-    color: #202124;
-}
-
-
 .profile {
     display: flex;
     align-items: center;
@@ -156,11 +179,6 @@
     padding: 8px;
 }
 
-.profile .material-symbols-outlined:hover {
-    background-color: #f0f0f0;
-    border-radius: 50%;
-}
-
 .profile img {
     border-radius: 50%;
     margin-left: 8px;
@@ -172,126 +190,153 @@
     border-radius: 50%;
 }
 
-/* Sidemenu styling */
+/* Main section styles */
 
-.sidemenu {
+/* Sidebar styling  */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 59.2px;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 64px);
-    width: 280px;
-    padding: 8px 0 0 0;
-    position: relative;
+    margin-top: 5px;
+    color: #5f6368;
+    width: 80px;
+    overflow-x: hidden;
+    transition: 0.8s;
+    height: 100%;
+  }
+
+.sidebar-hover {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+    background: white;
 }
 
-.sidemenu-item {
+.active {
+    background-color: #feefc3;
+    border-radius: 50%;
+    color: #202124;
+}
+
+.active:hover {
+    background-color: #feefc3;
+}
+  
+.sidebar .sidebar-item {
     display: flex;
     align-items: center;
-    padding-left: 12px;
-    height: 48px;
-    width: 280px;
     cursor: pointer;
+    white-space: nowrap;
+}
+  
+.sidebar-item .sidebar-text {
+    color: #202124;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 22px;
+    width: 280px;
 }
 
-.sidemenu-item:hover {
+.sidebar-item .sidebar-text::first-letter {
+    font-size: 14.62px;
+}
+  
+.sidebar-item .material-symbols-outlined {
+    margin-left: 12px; 
+    padding: 12px;
+}
+  
+.sidebar-item:nth-child(1) {
+    margin-top: 8px;
+}
+
+.sidebar-item:hover {
     background-color: #f0f0f0;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-}
-
-.sidemenu-item:first-child {
+  }
+  
+.sidebar-active-item {
     background-color: #feefc3;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 }
-
-.sidemenu .lightbulb {
-    color: #202124;
+  
+.sidebar-active-item:hover {
+    background-color: #feefc3;
 }
-
-.sidemenu .material-symbols-outlined {
-    padding: 0 12px 0 12px;
-}
-
-
-.sidemenu-text {
-    font-size: 14.6px;
-    font-weight: 500;
-    color: #202124;
-    margin-left: 20px;
-}
-
-footer {
-    font-size: 12px;
-    color: rgb(95, 99, 104);
-    padding: 4px 0 6px 24px;
-    margin: 20px 0 12px 0;
-    position: absolute;
-    top: 90%;
-    cursor: pointer;
-}
-
-footer p:hover {
-    color: black;
-}
+   
 
 /* Main content styling */
 
 .container {
     display: flex;
+    position: relative;
 }
 
 .main-content {
     height: calc(100vh - 64px);
     width: calc(100vw - 280px);
+    position: absolute;
+    right: 2px;
+
 }
 
 /* Inactive form styling */
 
 .inactive-form-container {
     display: flex;
-    justify-content: center;
     visibility: visible;
-}
-
-.inactive-form {
-    display: flex;
-    align-items: center;
     border: 1px solid rgb(218, 220, 224);
-    border-left-width: 3px;
-    border-bottom-width: 3px;
-    border-bottom-color: rgba(137, 136, 136, 0.5);
     border-radius: 8px;
     height: 46px;
-    width: 597.876px;
+    max-width: 600px;
     padding: 16px 10px 12px 14px;
-    margin-top: 32px;
-    box-shadow: 0.6px 2px 8px 1px rgba(218, 220, 224, 0.9);
+    margin: 32px auto 16px auto;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
+    position: relative;
+}
+
+.inactive-form  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .inactive-form-container input {
-    height: 22px;
-    width: 70%;
-    margin-right: 24px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 408px;
+    margin-left: 2px;
     outline: none;
-    border-style: none;
+    border: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 16px;
 }
 
-.inactive-form-container input::placeholder {
+.inactive-form input::placeholder {
     font-size: 16px;
     font-weight: 500;
     color: #574C4C;
 }
 
-.inactive-form-container .material-symbols-outlined {
+.inactiveform-icons {
+    display: flex;
+    height: 46px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.inactive-form .material-symbols-outlined {
+    display: flex;
     margin-left: 6px;
     padding: 12px;
     cursor: pointer;
-}
-
-.inactive-form-container .material-symbols-outlined:hover {
-    background-color: #E9EAEA;
-    color: #202124;
-    border-radius: 50%;
 }
 
 /* Active form styling */
@@ -306,66 +351,73 @@ footer p:hover {
     height: 136.13px;
     width: 600px;
     border: 1px solid rgb(218, 220, 224);
-    border-left-width: 3px;
-    border-bottom-width: 3px;
-    border-bottom-color: rgba(137, 136, 136, 0.5);
     border-radius: 8px;
-    box-shadow: 0.6px 2px 8px 1px rgba(218, 220, 224, 0.9);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 2px 6px 2px rgba(60,64,67,0.149);
     margin-top: 32px;
     display: none;
 }
 
-.active-form-container .note-title, .modal .note-title {
+.note-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 44px;
     width: 597.876px;
     padding: 10px 15px;
-}
-
-.active-form-container .note-title input, .modal .note-title input{
     outline: none;
     border: none;
+    font-size: 16px;
 }
 
-.active-form-container .note-title input::placeholder, .modal .note-title input::placeholder{
+.note-title input {
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #202124;
+    height: 100%;
+    width: 90%;
+}
+
+.note-title input::placeholder {
     font-size: 16px;
     font-weight: 500;
     color: #666874;
 }
 
-.active-form-container .note-title .material-symbols-outlined, .modal .note-title .material-symbols-outlined{
+.note-title .material-symbols-outlined {
     padding: 6px;
     cursor: pointer;
     color: #574C4C;
 }
 
-.active-form-container .note-title .material-symbols-outlined:hover, .modal .note-title .material-symbols-outlined:hover{
-    background-color: #E9EAEA;
+.note-title .material-symbols-outlined:hover {
     color: #202124;
     border-radius: 50%;
 }
 
-.active-form-container .note-text, .modal .note-text {
+.note-text {
     height: 46px;
     width: 597.876px;
     padding: 12px 16px;
 }
 
-.active-form-container .note-text input, .modal .note-text input{
+.note-text input {
     outline: none;
     border: none;
     width: 100%;
+    height: 100%;
+    font-size: 14px;
+
 }
 
-.active-form-container .note-text input::placeholder, .modal .note-text input::placeholder{
+.note-text input::placeholder {
     font-size: 14px;
     font-weight: 500;
     color: #574C4C;
 }
 
-.active-form-container .footer-icons, .modal .footer-icons {
+.form .note-icons-footer .footer-icons {
     display: flex;
 }
 
@@ -378,7 +430,7 @@ footer p:hover {
     color: #BFBFBF;
 }
 
-.active-form-container .note-icons-footer, .modal .note-icons-footer {
+.form .note-icons-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -388,7 +440,7 @@ footer p:hover {
     padding: 0px 0px 0px 2px;
 }
 
-.active-form-container .note-icons-footer .material-symbols-outlined, .modal .note-icons-footer .material-symbols-outlined{
+.note-icons-footer .material-symbols-outlined {
     display: flex;
     align-items: center;
     margin: 0px 8px;
@@ -396,13 +448,7 @@ footer p:hover {
     cursor: pointer;
 }
 
-.active-form-container .note-icons-footer .material-symbols-outlined:hover, .modal .note-icons-footer .material-symbols-outlined:hover{
-    background-color: #E9EAEA;
-    color: #202124;
-    border-radius: 50%;
-}
-
-.active-form-container .note-icons-footer button, .modal .note-icons-footer button{
+.close-btn {
     display: flex;
     align-items: center;
     height: 36px;
@@ -410,109 +456,81 @@ footer p:hover {
     margin-right: 15px;
     padding: 8px 24px;
     border: none;
-    background-color: transparent;
+    background: none;
     font-size: 14.5px;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.8);
     cursor: pointer;
 }
 
-.active-form-container .note-icons-footer button:hover, .model button:hover {
+.close-btn:hover {
     background-color: rgba(244, 244, 244, 0.5);
     border-radius: 4px;
-}
-
-/* Tooltip stylying for icons */
-
-.tooltip {
-    position: relative;
-}
-
-.tooltip-text {
-    position: absolute;
-    left: -3%;
-    top: 100%;
-    font-size: 0.8rem;
-    background-color: rgb(32,33,36);
-    color: #fff;
-    opacity: 0.8;
-    padding: 5px;
-    white-space: nowrap;
-    border-radius: 5px;
-    z-index: 100;
-    visibility: hidden;
-}
-
-.tooltip:hover .tooltip-text {
-    visibility: visible;
 }
 
 /* Notes styling */
 
 .notes {
-    height: 350px;
-    margin: 30px 0px 0px 85px;
+    display: flex;
+    justify-content: left;
+    margin: 0px 41.067px 0px 65px;
+    flex-wrap: wrap;
 }
 
 .note {
-    height: 130.27px;
     width: 240px;
+    height: 130.27px;
     border: 1px solid rgb(218, 220, 224);
     border-radius: 8px;
+    margin: 16px 0px 16px 16px;
     position: relative;
 }
 
-.note-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 10px 0px 16px;
-    height: 38px;
-    cursor: default;
+.note:hover {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+  }
+
+.check-circle {
+    position: absolute;
+    top: -19px;
+    left: -19px;
 }
 
-.note-header p {
+.note .note-title {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px 0px 16px;
+    height: 38px;
+    width: 100%;
+    cursor: default;
     font-size: 16px;
     font-weight: 500;
     color: #202124;
 }
 
-.note-footer-icons {
-    display: flex;
-    height: 34.13px;
-    margin: 4px 0px 4px 0px;
-}
-
-.note .footer-icon {
-    font-size: 18px;
-    margin: 0px 3px 0px 3px;
-    padding: 8px;
-}
-
-.note .footer-icon:hover {
-    background-color: #E9EAEA;
-    color: #202124;
-    border-radius: 50%;
-}
-
-.note-text-area {
+.note .note-text {
     display: flex;
     align-items: center;
-    height: 52px;
+    height: 48px;
+    width: 100%;
     padding: 12px 16px;
     font-size: 18px;
     color: #202124;
     cursor: default;
 }
 
-.note .note-pin {
-    padding: 6px;
+.note .note-footer-icons {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    width: 100%;
+    margin: 4px 0px;
 }
 
-.note .note-pin:hover {
-    background-color: #E9EAEA;
-    color: #202124;
-    border-radius: 50%;
+.note .footer-icon {
+    font-size: 18px;
+    margin: 0px 3px 0px 3px;
+    padding: 8px;
 }
 
 .note .material-symbols-outlined {
@@ -522,7 +540,6 @@ footer p:hover {
 
 .note:hover .material-symbols-outlined {
     visibility: visible;
- 
 }
 
 /* Modal styling */
@@ -531,7 +548,7 @@ footer p:hover {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(121, 122, 124, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     border: none;
@@ -542,7 +559,7 @@ footer p:hover {
 .modal-content {
     width: 597.876px;
     position: relative; 
-    top: 36%;
+    top: 27.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: none;
@@ -577,9 +594,8 @@ footer p:hover {
 
 .modal .note-title input::placeholder {
     font-size: 22px;
-    line-height: 28px;height: 136.13px;
+    height: 136.13px;
     font-weight: 400;
-    color: rgb(32,33,36);
 }
 
 .modal .note-text {
@@ -590,12 +606,12 @@ footer p:hover {
 .modal .note-text input {
     height: 30px;
     font-size: 16px;
+    
 }
 
 .modal .note-text input::placeholder {
     font-size: 16px;
     font-weight: 400;
-    color: rgb(32,33,36);
 }
 
 .open-modal {
